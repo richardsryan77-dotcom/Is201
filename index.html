@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Ryan Richards | Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        /* ── SHARED NAV POLISH ── */
+        #mainNav {
+            background-color: #1a1a2e !important;
+            border-bottom: 3px solid #c9a84c;
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
+        #mainNav .navbar-brand {
+            font-family: 'Lora', serif;
+            color: #c9a84c !important;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        #mainNav .nav-link {
+            color: rgba(255,255,255,0.82) !important;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+        #mainNav .nav-link:hover {
+            color: #c9a84c !important;
+        }
+        #mainNav .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.989);
+            color: #db2e2e;
+        }
+
+        /* ── HERO ── */
+        .masthead {
+            background-color: #1a1a2e;
+            background-size: cover;
+            background-position: center;
+            padding: 180px 0 120px;
+            position: relative;
+        }
+        .masthead::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, rgba(15,20,40,0.72) 0%, rgba(26,26,46,0.55) 100%);
+        }
+        .masthead .container { position: relative; z-index: 2; }
+        .masthead h1 {
+            font-family: 'Lora', serif;
+            font-size: clamp(2.8rem, 7vw, 5rem);
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+        .masthead .subheading {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            color: rgba(255,255,255,0.72);
+            font-weight: 300;
+            letter-spacing: 2px;
+            display: block;
+        }
+
+        /* ── CARD GRID ── */
+        .cards-section {
+            padding: 70px 0 80px;
+            background: #f8f6f2;
+        }
+        .card-link-block {
+            display: block;
+            background: #fff;
+            border-radius: 10px;
+            padding: 32px 28px;
+            margin-bottom: 24px;
+            text-decoration: none;
+            color: inherit;
+            border-left: 4px solid #c9a84c;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card-link-block:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+            color: inherit;
+            text-decoration: none;
+        }
+        .card-link-block h2 {
+            font-family: 'Lora', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 6px;
+        }
+        .card-link-block h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: #666;
+            margin: 0;
+        }
+        .card-icon {
+            font-size: 1.4rem;
+            color: #c9a84c;
+            margin-bottom: 12px;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #1a1a2e;
+            border-top: none !important;
+            padding: 28px 0;
+        }
+        footer .text-muted {
+            color: rgba(255,255,255,0.45) !important;
+            font-size: 0.82rem;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">Ryan Richards</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                Menu <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="resume.html">Résumé</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="scratch.html">Scratch Page</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="webapp.html">Web App</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead" style="background-image: url('assets/img/home-bg.jpg')">
+        <div class="container px-4 px-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7 text-center text-white">
+                    <h1>Ryan Richards</h1>
+                    <span class="subheading">IS 201 &nbsp;|&nbsp; Professional Portfolio &nbsp;|&nbsp; Personal Website</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="cards-section">
+        <div class="container px-4 px-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+
+                    <a href="about.html" class="card-link-block">
+                        <div class="card-icon"><i class="fas fa-user"></i></div>
+                        <h2>About Me</h2>
+                        <h3>Learn more about my background, interests, and goals</h3>
+                    </a>
+
+                    <a href="resume.html" class="card-link-block">
+                        <div class="card-icon"><i class="fas fa-file-alt"></i></div>
+                        <h2>Résumé</h2>
+                        <h3>Education, experience, skills, and accomplishments</h3>
+                    </a>
+
+                    <a href="scratch.html" class="card-link-block">
+                        <div class="card-icon"><i class="fas fa-code"></i></div>
+                        <h2>From-Scratch Page</h2>
+                        <h3>A custom-built page that highlights one of my interests</h3>
+                    </a>
+
+                    <a href="webapp.html" class="card-link-block">
+                        <div class="card-icon"><i class="fas fa-robot"></i></div>
+                        <h2>AI Web App</h2>
+                        <h3>A small interactive web app created with AI collaboration</h3>
+                    </a>
+
+                    <a href="contact.html" class="card-link-block">
+                        <div class="card-icon"><i class="fas fa-envelope"></i></div>
+                        <h2>Contact</h2>
+                        <h3>Ways to reach me or connect professionally</h3>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container px-4 px-lg-5 text-center">
+            <div class="small text-muted fst-italic">Copyright &copy; Ryan Richards 2026</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

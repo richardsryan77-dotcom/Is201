@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Résumé | Ryan Richards</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+
+        /* ── NAV ── */
+        #mainNav {
+            background-color: #1a1a2e !important;
+            border-bottom: 3px solid #c9a84c;
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
+        #mainNav .navbar-brand {
+            font-family: 'Lora', serif;
+            color: #c9a84c !important;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        #mainNav .nav-link {
+            color: rgba(255,255,255,0.82) !important;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+        #mainNav .nav-link:hover { color: #c9a84c !important; }
+        #mainNav .navbar-toggler { border-color: rgba(255,255,255,0.3); }
+
+        /* ── MASTHEAD ── */
+        .masthead {
+            background-color: #1a1a2e;
+            background-size: cover;
+            background-position: center;
+            padding: 140px 0 90px;
+            position: relative;
+        }
+        .masthead::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, rgba(15,20,40,0.75) 0%, rgba(26,26,46,0.6) 100%);
+        }
+        .masthead .container { position: relative; z-index: 2; }
+        .masthead h1 {
+            font-family: 'Lora', serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .masthead .subheading {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.7);
+            font-weight: 300;
+            letter-spacing: 2px;
+            display: block;
+        }
+
+        /* ── PAGE WRAPPER ── */
+        .resume-page {
+            background: #f8f6f2;
+            padding: 60px 0 80px;
+        }
+
+        /* ── RESUME CARD ── */
+        .resume-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 24px rgba(0,0,0,0.09);
+            overflow: hidden;
+        }
+
+        /* ── NAME HEADER ── */
+        .resume-header {
+            background: #1a1a2e;
+            padding: 40px 48px;
+            text-align: center;
+        }
+        .resume-header h1 {
+            font-family: 'Lora', serif;
+            font-size: 2.4rem;
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .resume-header p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.65);
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        /* ── SECTION ROWS ── */
+        .resume-section {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            border-top: 1px solid #eee;
+        }
+        .resume-section:first-of-type { border-top: none; }
+
+        .section-label {
+            background: #f5f3ef;
+            padding: 32px 24px;
+            border-right: 1px solid #eee;
+        }
+        .section-label span {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #c9a84c;
+            display: block;
+            position: sticky;
+            top: 20px;
+        }
+
+        .section-body {
+            padding: 32px 40px;
+        }
+
+        /* ── SUMMARY TEXT ── */
+        .summary-text {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.97rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* ── ENTRIES ── */
+        .entry {
+            margin-bottom: 28px;
+        }
+        .entry:last-child { margin-bottom: 0; }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-bottom: 4px;
+        }
+        .entry-title {
+            font-family: 'Lora', serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+        .entry-date {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.8rem;
+            color: #aaa;
+            font-style: italic;
+        }
+        .entry-org {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.88rem;
+            color: #c9a84c;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .entry ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .entry ul li {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 4px;
+        }
+
+        /* ── SKILLS GRID ── */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px 16px;
+        }
+        .skill-tag {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.85rem;
+            color: #444;
+            background: #f5f3ef;
+            border-left: 3px solid #c9a84c;
+            padding: 7px 12px;
+            border-radius: 4px;
+        }
+
+        /* ── PRINT BUTTON ── */
+        .print-btn-wrap {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .print-btn {
+            background: none;
+            border: 2px solid #c9a84c;
+            color: #c9a84c;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 8px 22px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .print-btn:hover {
+            background: #c9a84c;
+            color: #fff;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #1a1a2e;
+            border-top: none !important;
+            padding: 28px 0;
+        }
+        footer .text-muted {
+            color: rgba(255,255,255,0.45) !important;
+            font-size: 0.82rem;
+            letter-spacing: 1px;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 700px) {
+            .resume-section { grid-template-columns: 1fr; }
+            .section-label { padding: 20px 24px 8px; border-right: none; border-bottom: 1px solid #eee; }
+            .section-body { padding: 20px 24px; }
+            .skills-grid { grid-template-columns: 1fr 1fr; }
+            .resume-header { padding: 30px 24px; }
+        }
+
+        @media print {
+            #mainNav, .masthead, .print-btn-wrap, footer { display: none; }
+            .resume-page { padding: 0; background: #fff; }
+            .resume-card { box-shadow: none; border-radius: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">Ryan Richards</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                Menu <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="resume.html">Résumé</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="scratch.html">Scratch Page</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="webapp.html">Web App</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead" style="background-image: url('assets/img/post-bg.jpg')">
+        <div class="container px-4 px-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <h1>Résumé</h1>
+                    <span class="subheading">Education, experience, skills, and accomplishments</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="resume-page">
+        <div class="container px-4 px-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10 col-xl-9">
+
+                    <div class="print-btn-wrap">
+                        <button class="print-btn" onclick="window.print()">
+                            <i class="fas fa-print me-1"></i> Print / Save PDF
+                        </button>
+                    </div>
+
+                    <div class="resume-card">
+
+                        <!-- NAME HEADER -->
+                        <div class="resume-header">
+                            <h1>Ryan Richards</h1>
+                            <p>Pre-Business Student &nbsp;|&nbsp; Brigham Young University &nbsp;|&nbsp; Provo, Utah</p>
+                        </div>
+
+                        <!-- SUMMARY -->
+                        <div class="resume-section">
+                            <div class="section-label"><span>Summary</span></div>
+                            <div class="section-body">
+                                <p class="summary-text">Hardworking and motivated accounting student with strong organizational, analytical, and communication skills. Experience in accounts receivable and accounting internship work. Fluent in conversational Mandarin Chinese with two years of leadership and service experience in Edmonton, Canada.</p>
+                            </div>
+                        </div>
+
+                        <!-- EDUCATION -->
+                        <div class="resume-section">
+                            <div class="section-label"><span>Education</span></div>
+                            <div class="section-body">
+
+                                <div class="entry">
+                                    <div class="entry-header">
+                                        <span class="entry-title">Brigham Young University</span>
+                                        <span class="entry-date">Expected Jun 2028</span>
+                                    </div>
+                                    <div class="entry-org">Bachelor of Arts — Accounting &amp; Finance &nbsp;|&nbsp; Provo, UT</div>
+                                </div>
+
+                                <div class="entry">
+                                    <div class="entry-header">
+                                        <span class="entry-title">Alta High School</span>
+                                        <span class="entry-date">May 2023</span>
+                                    </div>
+                                    <div class="entry-org">High School Diploma &nbsp;|&nbsp; Sandy, UT &nbsp;|&nbsp; GPA 3.9</div>
+                                    <ul>
+                                        <li>Honor Roll all four years; National Honor Society</li>
+                                        <li>Athlete of the Year; Heisman Scholarship — State of Utah</li>
+                                        <li>Basketball Team Captain &amp; 5A State Champion</li>
+                                        <li>Golf Team Captain &amp; Top 10 in Region</li>
+                                        <li>Soccer 5A State Champion</li>
+                                        <li>Completed AP Chinese; DECA Member; Peer Leadership Team</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- WORK EXPERIENCE -->
+                        <div class="resume-section">
+                            <div class="section-label"><span>Experience</span></div>
+                            <div class="section-body">
+
+                                <div class="entry">
+                                    <div class="entry-header">
+                                        <span class="entry-title">Accounting Intern</span>
+                                    </div>
+                                    <div class="entry-org">Built Bar</div>
+                                    <ul>
+                                        <li>Supported accounting functions and gained hands-on experience in a professional finance environment.</li>
+                                        <li>Worked with financial records, reporting processes, and internal accounting tasks.</li>
+                                        <li>Strengthened analytical, organizational, and communication skills.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="entry">
+                                    <div class="entry-header">
+                                        <span class="entry-title">Accounts Receivable Clerk</span>
+                                    </div>
+                                    <div class="entry-org">Premium Ice Cream (Creamies) &nbsp;|&nbsp; Murray, UT</div>
+                                    <ul>
+                                        <li>Prepared and mailed invoices, processed payments, and documented account updates.</li>
+                                        <li>Recorded cash receipts to accurately track incoming payments.</li>
+                                        <li>Maintained organized financial records and supported daily accounting operations.</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- SERVICE -->
+                        <div class="resume-section">
+                            <div class="section-label"><span>Service</span></div>
+                            <div class="section-body">
+                                <div class="entry">
+                                    <div class="entry-header">
+                                        <span class="entry-title">Volunteer Representative / Missionary</span>
+                                        <span class="entry-date">2 years</span>
+                                    </div>
+                                    <div class="entry-org">The Church of Jesus Christ of Latter-day Saints &nbsp;|&nbsp; Edmonton, Canada</div>
+                                    <ul>
+                                        <li>Spoke Mandarin Chinese while teaching, serving, and communicating with diverse individuals.</li>
+                                        <li>Developed leadership, discipline, adaptability, and interpersonal communication skills.</li>
+                                        <li>Worked closely with others in goal-setting, planning, and community service.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SKILLS -->
+                        <div class="resume-section">
+                            <div class="section-label"><span>Skills</span></div>
+                            <div class="section-body">
+                                <div class="skills-grid">
+                                    <div class="skill-tag">Client Relations</div>
+                                    <div class="skill-tag">Critical Thinking</div>
+                                    <div class="skill-tag">Mandarin Chinese</div>
+                                    <div class="skill-tag">Accounts Receivable</div>
+                                    <div class="skill-tag">Attention to Detail</div>
+                                    <div class="skill-tag">People Skills</div>
+                                    <div class="skill-tag">Record Keeping</div>
+                                    <div class="skill-tag">Product Promotions</div>
+                                    <div class="skill-tag">Communication</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AWARDS -->
+                        <div class="resume-section">
+                            <div class="section-label"><span>Awards</span></div>
+                            <div class="section-body">
+                                <div class="entry">
+                                    <div class="entry-header">
+                                        <span class="entry-title">Eagle Scout</span>
+                                    </div>
+                                    <div class="entry-org">Boy Scouts of America</div>
+                                    <ul>
+                                        <li>Earned the rank of Eagle Scout through leadership, service, and merit badge completion.</li>
+                                        <li>Planned and led a community service project while coordinating volunteers and resources.</li>
+                                        <li>Developed responsibility, teamwork, communication, and problem-solving skills.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- /.resume-card -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container px-4 px-lg-5 text-center">
+            <div class="small text-muted fst-italic">Copyright &copy; Ryan Richards 2026</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

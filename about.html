@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>About | Ryan Richards</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        #mainNav {
+            background-color: #1a1a2e !important;
+            border-bottom: 3px solid #c9a84c;
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
+        #mainNav .navbar-brand {
+            font-family: 'Lora', serif;
+            color: #c9a84c !important;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        #mainNav .nav-link {
+            color: rgba(255,255,255,0.82) !important;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+        #mainNav .nav-link:hover { color: #c9a84c !important; }
+        #mainNav .navbar-toggler { border-color: rgba(255,255,255,0.3); color: #fff; }
+
+        .masthead {
+            background-color: #1a1a2e;
+            background-size: cover;
+            background-position: center;
+            padding: 160px 0 100px;
+            position: relative;
+        }
+        .masthead::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, rgba(15,20,40,0.72) 0%, rgba(26,26,46,0.55) 100%);
+        }
+        .masthead .container { position: relative; z-index: 2; }
+        .masthead h1 {
+            font-family: 'Lora', serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .masthead .subheading {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.7);
+            font-weight: 300;
+            letter-spacing: 2px;
+            display: block;
+        }
+
+        /* ── CONTENT ── */
+        .page-content {
+            background: #f8f6f2;
+            padding: 70px 0 80px;
+        }
+        .content-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 48px 44px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+        }
+        .content-card p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        .content-card p:last-child { margin-bottom: 0; }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 36px;
+            padding-top: 36px;
+            border-top: 2px solid #f0ece4;
+        }
+        .highlight-item {
+            text-align: center;
+            padding: 20px 12px;
+        }
+        .highlight-item .hi-icon {
+            font-size: 1.8rem;
+            color: #c9a84c;
+            margin-bottom: 10px;
+        }
+        .highlight-item h4 {
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 6px;
+        }
+        .highlight-item p {
+            font-size: 0.85rem !important;
+            color: #888 !important;
+            margin: 0 !important;
+            line-height: 1.5 !important;
+        }
+
+        footer {
+            background: #1a1a2e;
+            border-top: none !important;
+            padding: 28px 0;
+        }
+        footer .text-muted {
+            color: rgba(255,255,255,0.45) !important;
+            font-size: 0.82rem;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 600px) {
+            .about-highlights { grid-template-columns: 1fr; }
+            .content-card { padding: 30px 22px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">Ryan Richards</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                Menu <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="resume.html">Résumé</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="scratch.html">Scratch Page</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="webapp.html">Web App</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead" style="background-image: url('assets/img/post-bg.jpg')">
+        <div class="container px-4 px-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <h1>About Me</h1>
+                    <span class="subheading">My background, interests, and future goals</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-content">
+        <div class="container px-4 px-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="content-card">
+
+                        <p>Hello! My name is Ryan Richards, and I am a student at Brigham Young University studying Accounting. I am interested in finance, business leadership, and building a successful career through hard work and continuous learning.</p>
+
+                        <p>This website highlights my professional background, résumé, and personal work. I created it to demonstrate my understanding of HTML, CSS, Bootstrap styling, and modern web design principles.</p>
+
+                        <p>I have gained valuable experience working in accounting roles with companies such as Creamies and Built Bar. These opportunities have helped me strengthen my communication, leadership, teamwork, and problem-solving skills.</p>
+
+                        <p>Outside of academics, I enjoy sports, fitness, music, and spending time with family and friends. I also enjoy setting goals and challenging myself to improve in all areas of life.</p>
+
+                        <p>My long-term goal is to build a successful career in accounting and eventually earn my MBA. I hope to contribute through strong work ethic, leadership, and a willingness to keep learning and growing.</p>
+
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <div class="hi-icon"><i class="fas fa-graduation-cap"></i></div>
+                                <h4>BYU Accounting</h4>
+                                <p>Expected graduation 2028</p>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="hi-icon"><i class="fas fa-briefcase"></i></div>
+                                <h4>Work Experience</h4>
+                                <p>Built Bar &amp; Creamies</p>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="hi-icon"><i class="fas fa-language"></i></div>
+                                <h4>Mandarin Chinese</h4>
+                                <p>2 years in Edmonton, Canada</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container px-4 px-lg-5 text-center">
+            <div class="small text-muted fst-italic">Copyright &copy; Ryan Richards 2026</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
